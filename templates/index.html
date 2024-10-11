@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>標註編輯器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="container">
+    <div class="toolbar">
+        <input type="file" id="imageLoader" name="imageLoader" accept="image/*"/>
+        <button id="loadAnnotations">載入標註</button>
+        <button id="saveAnnotations">儲存標註</button>
+        <button id="deleteRectangle">刪除矩形框</button>
+        <span class="info">按住 Shift 進行多選，Ctrl+Z 撤銷，Ctrl+S 儲存，Delete 刪除</span>
+    </div>
+    <div class="canvas-container">
+        <canvas id="imageCanvas" tabindex="0"></canvas>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
